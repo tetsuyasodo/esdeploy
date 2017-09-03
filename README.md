@@ -5,7 +5,8 @@
 # export https_proxy=http://xxx:8080
 
 # yum update -y
-# yum install -y epel-release ssh-pass ansible git
+# yum install -y epel-release
+# yum install -y sshpass ansible git
 
 # ssh-keygen -t rsa
 # ssh-copy-id localhost
