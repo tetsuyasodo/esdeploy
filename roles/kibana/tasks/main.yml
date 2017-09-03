@@ -7,3 +7,13 @@
 - name: change kibana.conf
   copy: src="files/kibana.yml" dest="/etc/kibana/kibana.yml" mode=644 owner=root group=root
   notify: restart kibana
+
+- name: check kibana plugins installed
+  shell: "ls /usr/share/kibana/plugins/x-pack"
+  ignore_errors: yes
+  register: kibana_plugins_check
+
+- name: install kibana plugins
+  command: "/usr/share/kibana/bin/kibana-plugin install x-pack --silent"
+  when: kibana_plugins_check.rc != 0
+  notify: restart elasticsearch
