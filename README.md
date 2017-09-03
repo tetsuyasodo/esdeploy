@@ -12,5 +12,5 @@
 # cd esdeploy/roles
 # ln -s ~/ansible-elasticsearch elasticsearch
 
-# # ansible-playbook -i hosts site.yml
+# ansible-playbook -i hosts site.yml
 ```
