@@ -1,0 +1,9 @@
+- name: install elasticsearch
+  hosts: localhost
+  roles:
+    - { role: elasticsearch, es_instance_name: "node1" }
+  vars:
+    es_heap_size: 1g
+    es_proxy_host: 16.174.16.14
+    es_proxy_port: 8080
+    es_enable_xpack: true
