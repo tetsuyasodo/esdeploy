@@ -19,5 +19,8 @@
 
 # yum install -y kibana logstash
 # /usr/share/kibana/bin/kibana-plugin install x-pack
+# cat <<EOF>>/etc/kibana/kibana.yml
+server.host: \"0.0.0.0\"
+EOF
 # systemctl restart kibana
 ```
