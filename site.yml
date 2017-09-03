@@ -1,7 +1,7 @@
 - name: install elasticsearch
   hosts: localhost
   roles:
-    #- { role: elasticsearch, es_instance_name: "node1" }
+    - { role: elasticsearch, es_instance_name: "node1" }
     - { role: kibana }
   vars:
     es_heap_size: 1g
