@@ -1,0 +1,9 @@
+- name: install kibana
+  yum: name=kibana state=present
+
+- name: enable kibana service
+  systemd: name=kibana enabled=yes state=started
+
+- name: change kibana.conf
+  copy: src="files/kibana.yml" dest="/etc/kibana/kibana.yml" mode=644 owner=root group=root
+  notify: restart kibana
