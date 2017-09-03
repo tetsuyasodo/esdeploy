@@ -7,3 +7,5 @@
     es_proxy_host: 16.174.16.14
     es_proxy_port: 8080
     es_enable_xpack: true
+    es_api_basic_auth_username: elastic
+    es_api_basic_auth_password: changeme
